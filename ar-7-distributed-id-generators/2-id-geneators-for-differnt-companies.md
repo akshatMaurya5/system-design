@@ -112,6 +112,9 @@ If a server goes down, reset offsets on both DBs to `MAX + BUFFER` to avoid conf
 
 ## Snowflake (Twitter ID Generator)
 
+<img width="1224" height="497" alt="image" src="https://github.com/user-attachments/assets/4d1bc212-b8ba-43de-9725-c101f373ce7d" />
+
+
 Snowflake is used for tweet IDs and was adopted by other products (Discord, Instagram).
 
 - Snowflakes are 64-bit integers (8 bytes).
