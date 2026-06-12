@@ -79,7 +79,7 @@
 
 ![Approach 3](image-1.png)
 
-- Only a few seats will be available.
+- Only a few seats will be fillled.
 - Using `ORDER BY`, the query picks the first seat where `user_id` is `NULL`.
 
 ### Approach 4
