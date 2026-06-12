@@ -47,6 +47,8 @@ This long text is stored on disk.
 
 So there are two calls: one to read the column and one to read the reference point to the disk.
 
+when you declare a column as LONGTEXT, TEXT, VARCHAR(MAX), etc., the database engine will usually decide automatically whether to keep the value inside the row or move it to separate disk pages and store an internal pointer. You typically do not need to implement that mechanism yourself.
+
 ## Storing datetime in DB (`published_at` column)
 
 - Store it as a datetime object in DB
