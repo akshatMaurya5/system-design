@@ -61,7 +61,7 @@ INSERT INTO store VALUES (k, v, e);
   ```
 - On delete, mark the key as expired:
   ```sql
-  UPDATE store SET expired_at = 0 WHERE key = k;
+  UPDATE store SET expired_at = -1 WHERE key = k;
   ```
 - If a key is never fetched, it may remain in the table until cleanup runs.
 
