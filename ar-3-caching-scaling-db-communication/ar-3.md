@@ -5,7 +5,7 @@
 ### Caching at Different Levels
 1. API server memory cache
    - limited capacity
-   - AI server cache can fail when data is down
+   - API server cache can fail when data is down
    - high inconsistency risk
    
    ![alt text](image.png)
