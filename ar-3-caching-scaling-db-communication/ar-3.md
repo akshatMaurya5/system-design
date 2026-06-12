@@ -38,7 +38,7 @@
 
 ## Delegation
 - example: add basic analytics to a blog site
-- performance mantra: if it does not need to be done in real time, it should not be done in real time
+- *performance mantra*: if it does not need to be done in real time, it should not be done in real time
 - handle those tasks with workers
 - example: total number of blogs a user has written
 
