@@ -1,5 +1,26 @@
 ## Ticketmaster system design
 
+## Table of Contents
+
+- [Ticketmaster system design](#ticketmaster-system-design)
+- [Funcational requirements](#funcational-requirements)
+- [Summary](#summary)
+- [Functional requirements](#functional-requirements)
+- [Non-functional requirements](#non-functional-requirements)
+- [Core entities](#core-entities)
+- [APIs](#apis)
+- [High-level design](#high-level-design)
+- [Deep dive](#deep-dive)
+  - [1) Low-latency search](#1-low-latency-search)
+  - [2) Handling surge events](#2-handling-surge-events)
+  - [3) Caching and Redis](#3-caching-and-redis)
+- [API gateway and client-facing considerations](#api-gateway-and-client-facing-considerations)
+- [gRPC and HTTP/2](#grpc-and-http2)
+  - [Why gRPC is mentioned](#why-grpc-is-mentioned)
+  - [Why HTTP/2 is relevant](#why-http2-is-relevant)
+- [GraphQL (why it might come up)](#graphql-why-it-might-come-up)
+- [Recommendations (short)](#recommendations-short)
+
 ## Funcational requirements
 # Ticketmaster — System Design
 
@@ -145,10 +166,3 @@ If you'd like, I can also:
 - Insert code snippets for a sample Protobuf `Booking` service and a sample REST booking flow.
 
 Updated file: [ticketmaster.md](ticketmaster.md)
-
-
-
-
-
-
-
