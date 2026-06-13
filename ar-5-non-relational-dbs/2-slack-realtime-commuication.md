@@ -209,8 +209,3 @@ So the whole channel subscription is handled by Redis.
 - The goal is to minimize I/O for Redis pub/sub
 
 ![WebSocket server resolver](image-17.png)
-
-
-
-
-
