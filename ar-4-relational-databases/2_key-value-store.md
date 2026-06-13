@@ -1,5 +1,35 @@
 # Key-Value Store on a Relational Database
 
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Brainstorm](#brainstorm)
+- [Storage](#storage)
+  - [Storage design options](#storage-design-options)
+- [Insert behavior](#insert-behavior)
+  - [Option 1: plain insert](#option-1-plain-insert)
+  - [Option 2: upsert](#option-2-upsert)
+- [TTL / key expiration](#ttl-key-expiration)
+  - [Question: how do we expire keys?](#question-how-do-we-expire-keys)
+    - [Lazy deletion](#lazy-deletion)
+    - [Hard delete cleanup](#hard-delete-cleanup)
+- [Implementation choices](#implementation-choices)
+  - [Storage backend](#storage-backend)
+  - [Schema: `store`](#schema-store)
+  - [Why use `is_deleted`?](#why-use-isdeleted)
+  - [Hard delete strategy](#hard-delete-strategy)
+- [Insert / update flow](#insert-update-flow)
+  - [Handling concurrent writes](#handling-concurrent-writes)
+- [TTL strategies](#ttl-strategies)
+  - [Approach 1: batch cleanup](#approach-1-batch-cleanup)
+  - [Approach 2: lazy deletion](#approach-2-lazy-deletion)
+  - [Approach 3: random sampling cleanup](#approach-3-random-sampling-cleanup)
+- [Delete behavior](#delete-behavior)
+- [Batch cleanup](#batch-cleanup)
+- [Read implementation](#read-implementation)
+- [High-Level Architecture](#high-level-architecture)
+  - [Scaling writes](#scaling-writes)
+
 ## Requirements
 - Infinitely scalable
 - `GET`, `PUT`, `DEL`, `TTL`
