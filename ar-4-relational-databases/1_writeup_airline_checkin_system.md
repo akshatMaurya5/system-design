@@ -1,5 +1,26 @@
 # Relational Databases
 
+## Table of Contents
+
+- [Topics Covered](#topics-covered)
+- [Indexes](#indexes)
+- [Database Locking (Pessimistic Locking)](#database-locking-pessimistic-locking)
+  - [Locking flow](#locking-flow)
+  - [Locking strategies](#locking-strategies)
+    - [Shared lock](#shared-lock)
+    - [Exclusive lock](#exclusive-lock)
+  - [Why locks are needed](#why-locks-are-needed)
+  - [Risks](#risks)
+- [Locking Clauses](#locking-clauses)
+- [Designing an Airline Check-in System](#designing-an-airline-check-in-system)
+  - [System assumptions](#system-assumptions)
+  - [Check-in scenario](#check-in-scenario)
+- [Check-in Approaches](#check-in-approaches)
+  - [Approach 3](#approach-3)
+  - [Approach 4](#approach-4)
+  - [Approach 5](#approach-5)
+- [Key takeaway](#key-takeaway)
+
 ## Topics Covered
 1. Relational databases and pessimistic locking
 2. Designing an airline check-in system
@@ -105,8 +126,3 @@
 ## Key takeaway
 - Fixed inventory plus contention leads to locking.
 - When this case arises, use locks to manage concurrency.
-
-
-
- 
-
