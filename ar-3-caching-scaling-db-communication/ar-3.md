@@ -1,5 +1,25 @@
 # System Design Notes: Caching, Scaling, Delegation, and Communication
 
+## Table of Contents
+
+- [Foundation Topics](#foundation-topics)
+  - [Caching at Different Levels](#caching-at-different-levels)
+- [Scaling](#scaling)
+  - [Scaling for a Medium App](#scaling-for-a-medium-app)
+  - [Scaling the Database](#scaling-the-database)
+- [Delegation](#delegation)
+- [Brokers](#brokers)
+  - [Two Common Implementations](#two-common-implementations)
+  - [Kafka Limitation](#kafka-limitation)
+- [Concurrency](#concurrency)
+  - [Handling Concurrency](#handling-concurrency)
+- [Communication Patterns](#communication-patterns)
+  - [Common Communication Styles](#common-communication-styles)
+  - [Long Polling vs Short Polling](#long-polling-vs-short-polling)
+- [WebSockets](#websockets)
+  - [Server-Sent Events](#server-sent-events)
+- [Using Real-Time Features in a Medium Blog App](#using-real-time-features-in-a-medium-blog-app)
+
 ## Foundation Topics
 
 ### Caching at Different Levels
@@ -7,7 +27,7 @@
    - limited capacity
    - API server cache can fail when data is down
    - high inconsistency risk
-   
+
    ![alt text](image.png)
 
 2. Database views (materialized views)
@@ -114,4 +134,3 @@ Real-time interactions:
 - live update of counts without refresh
 - Instagram-style live interaction updates
 - on Medium, article clap counts should update in real time for other readers
-
