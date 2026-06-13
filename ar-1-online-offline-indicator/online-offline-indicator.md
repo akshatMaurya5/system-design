@@ -1,5 +1,24 @@
 # Online / Offline Indicator
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Use Case](#use-case)
+- [Example Representation](#example-representation)
+- [Initial Plan](#initial-plan)
+  - [Candidate models](#candidate-models)
+- [Key Questions](#key-questions)
+- [Presence Timeout](#presence-timeout)
+- [Storage Model](#storage-model)
+- [Optimization](#optimization)
+  - [Online-only store](#online-only-store)
+  - [Eviction strategy](#eviction-strategy)
+- [Performance Considerations](#performance-considerations)
+  - [Throughput](#throughput)
+  - [Network efficiency](#network-efficiency)
+- [Scaling Considerations](#scaling-considerations)
+- [Summary](#summary)
+
 ## Overview
 
 Determine whether a user is currently online or offline in a distributed service.
@@ -91,4 +110,3 @@ Determine whether a user is currently online or offline in a distributed service
 - Derive online/offline from recency.
 - Store only active users when feasible.
 - Use TTL-based eviction and connection pooling for high throughput.
-
