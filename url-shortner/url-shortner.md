@@ -1,4 +1,18 @@
-## URL Shortener
+# URL Shortener
+
+## Table of Contents
+
+- [URL Shortener](#url-shortener)
+- [Functional Requirements](#functional-requirements)
+- [Non-Functional Requirements](#non-functional-requirements)
+- [Core Entities](#core-entities)
+- [APIs](#apis)
+- [High-Level Design](#high-level-design)
+- [Deep Dive](#deep-dive)
+  - [1) Fast and Unique Short URL](#1-fast-and-unique-short-url)
+  - [2) Fast Redirects](#2-fast-redirects)
+  - [3) Global Counter Handling](#3-global-counter-handling)
+- [Final Design](#final-design)
 
 ## Functional Requirements
 - Create short URL from long URL
