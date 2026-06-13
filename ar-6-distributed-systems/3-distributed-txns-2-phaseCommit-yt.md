@@ -129,7 +129,7 @@ Once both of these are done, the order is placed.
   "id": ,
   "food_id": ,
   "is_reserved": ,
-  "order_id": 
+  "order_id":
 }
 ```
 
@@ -146,4 +146,3 @@ Once both of these are done, the order is placed.
   - `/store/food/book`
 
 ![alt text](image-19.png)
-
