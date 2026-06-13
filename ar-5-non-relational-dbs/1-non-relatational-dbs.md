@@ -1,5 +1,16 @@
 # Non-Relational Databases
 
+## Table of Contents
+
+- [Types of NoSQL Databases](#types-of-nosql-databases)
+  - [1. Document Databases](#1-document-databases)
+  - [2. Key-Value Stores](#2-key-value-stores)
+  - [3. Column-Oriented Databases](#3-column-oriented-databases)
+    - [Row-Oriented vs Column-Oriented Storage](#row-oriented-vs-column-oriented-storage)
+  - [4. Graph Databases](#4-graph-databases)
+- [Why NoSQL Databases Scale](#why-nosql-databases-scale)
+- [SQL vs NoSQL Comparison](#sql-vs-nosql-comparison)
+
 **NoSQL:** Data structured in a non-relational format.
 
 In most cases, NoSQL databases provide scalability and availability by compromising consistency. Most NoSQL databases are `eventually consistent`.
@@ -80,5 +91,3 @@ Most people perform domestic transactions. If you attempt an international trans
 | **Data Organization** | Normalized | Denormalized |
 | **Sharding** | Can be achieved | Data modeled to be sharded |
 | **Use Case** | General-purpose applications | High ingestion rates, horizontal scaling |
-
-
