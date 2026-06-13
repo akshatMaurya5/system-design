@@ -1,4 +1,13 @@
-﻿## Medium App
+# Medium App
+
+## Table of Contents
+
+- [Medium App](#medium-app)
+  - [Functional requirements](#functional-requirements)
+  - [What DB?](#what-db)
+  - [Importance of `is_deleted`](#importance-of-isdeleted)
+- [Bio and body column](#bio-and-body-column)
+- [Storing datetime in DB (`published_at` column)](#storing-datetime-in-db-publishedat-column)
 
 ### Functional requirements
 
