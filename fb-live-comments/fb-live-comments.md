@@ -1,5 +1,22 @@
 # FB Live Comments System Design
 
+## Table of Contents
+
+- [Functional Requirements](#functional-requirements)
+- [Non-Functional Requirements](#non-functional-requirements)
+- [Core Entities](#core-entities)
+- [APIs](#apis)
+- [High-Level Design](#high-level-design)
+  - [Pagination](#pagination)
+- [Deep Dive: WS vs SSE](#deep-dive-ws-vs-sse)
+- [Scaling to Millions of Users](#scaling-to-millions-of-users)
+- [Coordination](#coordination)
+  - [Naive Pub/Sub](#naive-pubsub)
+  - [Partitioned Pub/Sub](#partitioned-pubsub)
+  - [Real-Time Dispatcher / Comment Service](#real-time-dispatcher-comment-service)
+- [Zookeeper in This Design](#zookeeper-in-this-design)
+- [Final System Design Summary](#final-system-design-summary)
+
 ## Functional Requirements
 - Viewers can post comments on a live video.
 - Viewers can see live comments in real time.
