@@ -1,5 +1,15 @@
 ## Dropbox System Design
 
+## Table of Contents
+
+- [Dropbox System Design](#dropbox-system-design)
+- [Platform APIs](#platform-apis)
+- [1. Upload large files](#1-upload-large-files)
+- [2. Latency](#2-latency)
+- [3. High Data Integrity](#3-high-data-integrity)
+  - [a) Sync should be fast](#a-sync-should-be-fast)
+  - [b) Sync should be consistent](#b-sync-should-be-consistent)
+
 # Functional Requirements
 1. User can upload files.
 2. User can download files.
