@@ -1,5 +1,24 @@
 # WhatsApp System Design
 
+## Table of Contents
+
+- [Functional Requirements](#functional-requirements)
+- [Non-Functional Requirements](#non-functional-requirements)
+- [Core Entities](#core-entities)
+- [APIs](#apis)
+  - [Commands Sent:](#commands-sent)
+  - [Commands Received:](#commands-received)
+- [High Level Design](#high-level-design)
+  - [Initial Design](#initial-design)
+- [Deep Dive](#deep-dive)
+  - [Serving Billions of Users:](#serving-billions-of-users)
+    - [Layer 4 LB:](#layer-4-lb)
+    - [Layer 7 LB:](#layer-7-lb)
+  - [Routing Problem](#routing-problem)
+- [Better Solution](#better-solution)
+  - [Requirement: Messages not stored unnecessarily](#requirement-messages-not-stored-unnecessarily)
+- [Final Design](#final-design)
+
 ## Functional Requirements
 - Start group chats
 - Send/receive messages
