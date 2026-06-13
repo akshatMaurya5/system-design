@@ -5,7 +5,7 @@
 ### Caching at Different Levels
 1. API server memory cache
    - limited capacity
-   - AI server cache can fail when data is down
+   - API server cache can fail when data is down
    - high inconsistency risk
    
    ![alt text](image.png)
@@ -38,7 +38,7 @@
 
 ## Delegation
 - example: add basic analytics to a blog site
-- performance mantra: if it does not need to be done in real time, it should not be done in real time
+- *performance mantra*: if it does not need to be done in real time, it should not be done in real time
 - handle those tasks with workers
 - example: total number of blogs a user has written
 
