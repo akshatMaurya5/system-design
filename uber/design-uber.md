@@ -1,5 +1,15 @@
 ## Uber System Design
 
+## Table of Contents
+
+- [Uber System Design](#uber-system-design)
+- [Out of scope](#out-of-scope)
+- [Low latency matching](#low-latency-matching)
+- [Consistency of matching](#consistency-of-matching)
+- [Alternative solution](#alternative-solution)
+- [Other deep dive topics](#other-deep-dive-topics)
+- [Final Design](#final-design)
+
 # Functional Requirements
 - A user can input a start and destination location and receive an estimated fare.
 - A user can request a ride based on the estimated fare.
@@ -42,7 +52,7 @@
 - `POST /location/update`
   ```json
   {
-    "lat": ..., 
+    "lat": ...,
     "long": ...
   }
   ```
