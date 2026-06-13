@@ -165,7 +165,7 @@ Benefits:
 3. **User B visits User A's profile**
    - Request: `GET /users/A/posts`
    - Response includes dynamically generated URLs:
-   
+
    ```json
    [
      {
