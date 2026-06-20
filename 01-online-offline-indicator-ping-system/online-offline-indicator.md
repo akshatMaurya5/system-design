@@ -104,6 +104,9 @@ Determine whether a user is currently online or offline in a distributed service
 - Use in-memory caches for recent online users.
 - Persist state in a fast key-value store with TTL support.
 
+<img width="705" height="476" alt="image" src="https://github.com/user-attachments/assets/e1c2aab3-273a-4ae4-9af3-4524a3d62acb" />
+
+
 ## Summary
 
 - Track presence by last-seen timestamp.
