@@ -223,7 +223,7 @@ $$ LANGUAGE plpgsql;
 
 
 # This is how ID generators evolved: 
-
+```
 Auto Increment DB
         ↓
 Flickr Ticket Server
@@ -233,6 +233,7 @@ Instagram Sharded IDs
 Twitter Snowflake
         ↓
 Modern distributed ID generators
+```
 
 
 
