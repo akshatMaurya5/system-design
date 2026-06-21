@@ -110,15 +110,22 @@ Single server is a SPOF. One approach is to run two ticket servers and round-rob
 
 If a server goes down, reset offsets on both DBs to `MAX + BUFFER` to avoid conflicts.
 
+`Flickr used a centralized ticket server that generated monotonically increasing unique IDs. Application servers requested IDs from this service, which maintained a global counter (often backed by a database). It guaranteed uniqueness but introduced a bottleneck and single point of failure, leading to later distributed solutions like Snowflake.`
+
 ## Snowflake (Twitter ID Generator)
 
 <img width="1224" height="497" alt="image" src="https://github.com/user-attachments/assets/4d1bc212-b8ba-43de-9725-c101f373ce7d" />
 
+Later, systems such as Twitter's Snowflake removed the central ticket server.
+
+Instead, each machine generates IDs locally.
 
 Snowflake is used for tweet IDs and was adopted by other products (Discord, Instagram).
 
 - Snowflakes are 64-bit integers (8 bytes).
 - Time is on the left-hand side (most significant bits); tie-breakers (machine/sequence) are on the right.
+
+-
 
 ![alt text](image-11.png)
 
@@ -170,6 +177,15 @@ Instagram structure (example):
 
 Instagram uses logical shards (partitions) across physical DB servers; each shard has the same schema.
 
+Instagram famously used a variation based on database sharding and ID allocation.
+
+ID =
+(timestamp part)
++
+(shard identifier)  <- this will make sure IDs dont collide among different db shards
++
+(local counter)
+
 ![alt text](image-13.png)
 
 Example (conceptual) SQL/PLpgSQL for a `next_id()` function:
@@ -204,3 +220,21 @@ $$ LANGUAGE plpgsql;
 
 - `<< 23` sets the epoch part (13 + 10 bits)
 - `<< 10` sets the shard id
+
+
+# This is how ID generators evolved: 
+
+Auto Increment DB
+        ↓
+Flickr Ticket Server
+        ↓
+Instagram Sharded IDs
+        ↓
+Twitter Snowflake
+        ↓
+Modern distributed ID generators
+
+
+
+
+
